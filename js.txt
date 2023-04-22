@@ -1,0 +1,22 @@
+// Define the quote API URL
+const apiUrl = 'https://api.quotable.io/random';
+
+// Function to fetch a random quote from the API
+async function fetchQuote() {
+  const response = await fetch(apiUrl);
+  const data = await response.json();
+  return data.content;
+}
+
+// Function to display the quote in the popup
+function displayQuote(quote) {
+  const quoteText = document.getElementById('quote-text');
+  quoteText.innerText = quote;
+}
+
+// Add a click event listener to the button
+const quoteButton = document.getElementById('quote-button');
+quoteButton.addEventListener('click', async function() {
+  const quote = await fetchQuote();
+  displayQuote(quote);
+});

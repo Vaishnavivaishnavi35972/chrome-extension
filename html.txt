@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inspiration Chrome Extension</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+  <div id="quote-container">
+    <p id="quote-text">Click the button to get an inspirational quote!</p>
+    <button id="quote-button">Get Quote</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
